@@ -6,10 +6,9 @@
 // console.log(getShippingMessage("Germany", 80, 20)) // "Shipping to Germany will cost 100 credits"
 // console.log(getShippingMessage("Sweden", 100, 20)) // "Shipping to Sweden will cost 120 credits"
 function formatMessage(message, maxLength) {
+    if (maxLength >= message.length) { return message}
+    else { return message.slice(0, maxLength) + "..." }
     
-    if (maxLength >= message) { return `${message}` }
-    else { return `${message} ${"..."}` 
-}
 }
 
 console.log(formatMessage("Curabitur ligula sapien", 16)) // "Curabitur ligula..."
