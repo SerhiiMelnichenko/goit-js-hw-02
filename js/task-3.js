@@ -1,6 +1,7 @@
 
 function checkForSpam(message) {
-    if (message.includes("spam") || message.includes("sale")) { return true}
+    const lowerCaseMessage = message.toLowerCase()
+    if (lowerCaseMessage.includes("spam") || lowerCaseMessage.includes("sale")) { return true}
     else { return false }
 }
 
@@ -12,11 +13,3 @@ console.log(checkForSpam("Trust me, this is not a spam message")) // true
 console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")) // true
 console.log(checkForSpam("[SPAM] How to earn fast money?")) // true
 
-//приклад:
-// function normalizeInput(input, to) {
-// return to === "upper" ? input.toUpperCase() : input.toLowerCase();}
-
-// function checkForSpam(message) {
-//     if (message == message.includes("spam") || message.includes("sale")) { return true }
-//     else { return false }
-// }
